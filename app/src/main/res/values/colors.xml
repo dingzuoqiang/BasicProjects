@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    // app 规范 color
+    <color name="app_bg">@color/color_f5</color>
+    <color name="color_actionbar_bg">@color/white</color>
+    <color name="color_statusbar_bg">@color/white</color>
+    <color name="color_text_hint">@color/color_ddd</color>
+    <color name="color_divider">@color/color_e5</color>
+
+    // basic color
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="color_333">#333333</color>
+    <color name="color_666">#666666</color>
+    <color name="color_999">#999999</color>
+    <color name="color_ddd">#dddddd</color>
+    <color name="color_red">#F02326</color>
+    <color name="color_f5">#f5f5f5</color>
+    <color name="color_e5">#E5E5E5</color>
+
+    <!--20%黑-->
+    <color name="color_p20_000">#33000000</color>
+    <!--30% 黑-->
+    <color name="color_p30_000">#4D000000</color>
+    <!--40%黑-->
+    <color name="color_p40_000">#66000000</color>
+    <!--50%黑-->
+    <color name="color_p50_000">#7f000000</color>
+
+    // SwipeRefreshLayout
+    <color name="color1">#3fbeaf</color>
+    <color name="color2">#ff0000</color>
+    <color name="color3">#666666</color>
+
+</resources>

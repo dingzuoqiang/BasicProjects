@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.2"
+    defaultConfig {
+        applicationId "com.ding.basic"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.test.runner.AndroidJUnitRunner"
+        //开启dex分包
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应cpu类型的.so库（不需要的删除即可）。 x5内核暂时不提供64位的so文件,在64位手机上需要让AP以32位模式运行
+            // , 'mips', 'mips64'
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64'
+        }
+        flavorDimensions "default"
+
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+    }
+
+//签名
+    signingConfigs {
+        debug {
+            storeFile file('ding.jks')
+            storePassword '123456'
+            keyAlias 'ding'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('ding.jks')
+            storePassword '123456'
+            keyAlias 'ding'
+            keyPassword '123456'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            addManifestPlaceholders([XG_ACCESS_ID      : "",//正式推送消息
+                                     XG_ACCESS_KEY     : "",
+                                     RongIM_APPKEY     : "",
+                                     APP_NAME          : "基础项目",
+                                     UMENG_APPKEY_VALUE: ""
+            ])
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+            addManifestPlaceholders([XG_ACCESS_ID      : "", //测试推送消息
+                                     XG_ACCESS_KEY     : "",
+                                     RongIM_APPKEY     : "",
+                                     APP_NAME          : "基础debug",
+                                     UMENG_APPKEY_VALUE: ""
+            ])
+        }
+
+        productFlavors {
+            develop {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qqsk"]
+            }
+            xiaomi {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+            }
+            vivo {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+            }
+            oppo {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+            }
+            anzhuo {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhuo"]
+            }
+            sanxing {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "sanxing"]
+            }
+            huawei {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+            }
+            yingyongbao {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+            }
+            channel_360 {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_360"]
+            }
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                //获取签名的名字 variant.signingConfig.name
+                //要被替换的源字符串
+                def sourceFile = "-${variant.flavorName}-${variant.buildType.name}"
+                //替换的字符串
+                def replaceFile = "_${variant.buildType.name}_V${variant.versionName}_${variant.flavorName}_${releaseTime()}"
+                outputFileName = output.outputFile.name.replace(sourceFile, replaceFile)
+            }
+        }
+    }
+}
+
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd HHmm", TimeZone.getTimeZone("GMT+08"))
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    api 'com.android.support:multidex:1.0.1'
+
+    //依赖注入
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // 圆角图片
+//    implementation 'com.github.SheHuan:NiceImageView:1.0.5'
+    implementation project(path: ':niceimageview')
+
+    // eventbus
+    api 'org.greenrobot:eventbus:3.0.0'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    // xutils
+    implementation 'org.xutils:xutils:3.9.0'
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    // 新版本提示
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.qianwen:update-app:3.5.2'
+}

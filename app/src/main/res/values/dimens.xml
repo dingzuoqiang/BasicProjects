@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Default row padding-->
+    <dimen name="row_horizontal_padding">15dp</dimen>
+    <dimen name="row_vertical_padding">13dp</dimen>
+
+    <!--大按钮高度-->
+    <dimen name="big_button_height">48dp</dimen>
+    <!--圆形头像高度-->
+    <dimen name="round_head_height_60">60dp</dimen>
+    <!--actionbar 高度-->
+    <dimen name="action_bar_height">45dp</dimen>
+    <!--tab 高度-->
+    <dimen name="tab_height">49dp</dimen>
+    <!--statusbar 高度-->
+    <dimen name="status_bar_height">25dp</dimen>
+    <!--间隔线 0.5dp 高度-->
+    <dimen name="divider_height">0.5dp</dimen>
+    <!--页面 模块间间距  15dp 高度-->
+    <dimen name="divide_height_in_page">15dp</dimen>
+
+    <!--<dimen name="indicatorMargin">5dp</dimen>-->
+    <dimen name="indicatorSpace">5dp</dimen>
+
+    <!-- 字体大小   -->
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_40">40sp</dimen>
+</resources>

@@ -1,0 +1,250 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorHint">@color/color_text_hint</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowBackground">@color/app_bg</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>  <!-- 透明背景 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="NoActionBarFullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>//设置全屏
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="dzq_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--窗口透明度 20%-->
+    <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+
+    <!--toobar titile 文字属性-->
+    <style name="ToolBarTitleTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--actionbar 最右侧文字按钮 style-->
+    <style name="ActionBarRightButtonTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/action_bar_height</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text_333_12">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/color_333</item>
+    </style>
+
+    <style name="Text_333_11" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text_333_13" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text_333_14" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text_333_15" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="Text_333_16" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text_333_17" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_17</item>
+    </style>
+
+    <style name="Text_333_18" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Text_333_20" parent="Text_333_12">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="Text_666_10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/color_666</item>
+    </style>
+
+    <style name="Text_666_11" parent="Text_666_10">
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text_666_12" parent="Text_666_10">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="Text_666_13" parent="Text_666_12">
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text_666_14" parent="Text_666_12">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text_666_16" parent="Text_666_12">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text_666_18" parent="Text_666_12">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Text_999_10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/color_999</item>
+    </style>
+
+    <style name="Text_999_11" parent="Text_999_10">
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text_999_12" parent="Text_999_10">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="Text_999_13" parent="Text_999_10">
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text_999_14" parent="Text_999_10">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text_999_15" parent="Text_999_10">
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="Text_red_10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/color_red</item>
+    </style>
+
+    <style name="Text_red_11" parent="Text_red_10">
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text_red_12" parent="Text_red_10">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="Text_red_13" parent="Text_red_12">
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text_red_14" parent="Text_red_12">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text_red_15" parent="Text_red_12">
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="Text_red_16" parent="Text_red_12">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text_red_17" parent="Text_red_12">
+        <item name="android:textSize">@dimen/sp_17</item>
+    </style>
+
+    <style name="Text_red_18" parent="Text_red_12">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Text_white_12">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_white_10" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text_white_11" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text_white_13" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text_white_14" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text_white_15" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="Text_white_16" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text_white_17" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_17</item>
+    </style>
+
+    <style name="Text_white_18" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Text_white_20" parent="Text_white_12">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+</resources>

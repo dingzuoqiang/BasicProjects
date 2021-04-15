@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.ding.basic.widget.NoScorllViewPager
+            android:id="@+id/vp_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ddd" />
+
+    <RadioGroup
+        android:id="@+id/rg_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_home_selector"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="@string/tab_home"
+            android:textColor="@drawable/tab_text_color"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_my_selector"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="@string/tab_mine"
+            android:textColor="@drawable/tab_text_color"
+            android:textSize="10sp" />
+
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseTitleBar">
+        <attr name="btbTitle" format="string" />
+        <attr name="btbLeftImage" format="reference" />
+        <attr name="btbCollectImage" format="reference" />
+        <attr name="btbShareImage" format="reference" />
+        <attr name="btbBackground" format="reference|color" />
+    </declare-styleable>
+
+
+</resources>
