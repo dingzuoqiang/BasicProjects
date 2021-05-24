@@ -15,7 +15,7 @@ android {
         ndk {
             //选择要添加的对应cpu类型的.so库（不需要的删除即可）。 x5内核暂时不提供64位的so文件,在64位手机上需要让AP以32位模式运行
             // , 'mips', 'mips64'
-            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64'
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
         }
         flavorDimensions "default"
 
@@ -131,7 +131,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     // 圆角图片
 //    implementation 'com.github.SheHuan:NiceImageView:1.0.5'
-    implementation project(path: ':niceimageview')
+//    implementation project(path: ':niceimageview')
+//    Android studio 3.5.2 要使用如下配置
+    implementation project(path: ':niceimageview', configuration: 'default')
 
     // eventbus
     api 'org.greenrobot:eventbus:3.0.0'
